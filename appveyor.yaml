@@ -4,6 +4,8 @@ image:
 - Ubuntu
 - macos
 
+build: off
+
 # Install Pester for testing, setup AWS Profiles and deploy minio via docker
 install:
   - ps: $PSVersionTable
