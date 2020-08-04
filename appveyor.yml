@@ -4,6 +4,9 @@ image:
 - Ubuntu
 - macos
 
+configuration:
+- test
+
 build: off
 
 # Install Pester for testing, setup AWS Profiles and deploy minio via docker
@@ -13,3 +16,6 @@ install:
   - ps: Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
   - ps: Install-Module Pester -Scope CurrentUser -Force -SkipPublisherCheck -MinimumVersion 4.4.4 -MaximumVersion 4.999
   - ps: Import-Module -Name Pester -Force
+
+  test_script:
+  - ps: Invoke-Pester
