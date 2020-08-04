@@ -17,5 +17,5 @@ install:
   - ps: Install-Module Pester -Scope CurrentUser -Force -SkipPublisherCheck -MinimumVersion 4.4.4 -MaximumVersion 4.999
   - ps: Import-Module -Name Pester -Force
 
-  test_script:
+test_script:
   - ps: Invoke-Pester
